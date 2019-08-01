@@ -10,6 +10,7 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify, render_template, json
 from flask_sqlalchemy import SQLAlchemy
+from flask import url_for
 
 app = Flask(__name__)
 
@@ -26,6 +27,13 @@ def data():
 def plots():
     return render_template('plots.html')
 
+@app.route("/jsonData")
+def getData():
+	filename = 'data/NewRookiePredictions.json'
+	with open(filename) as test_file:
+		data = json.load(test_file)
+		return jsonify(data)
+	return jsonify(data)
 
 if __name__ == "__main__":
     app.run()

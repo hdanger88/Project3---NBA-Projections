@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
@@ -28,6 +28,7 @@
     <!-- Bootstrap CSS -->  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://d3js.org/d3.v5.min.js"></script>
 
 
   </head>
@@ -77,17 +78,15 @@
     <!-- bar chart div -->
     <div id="bar_chart"></div>
     <hr>
-    <select id="selDataset" onchange="getData(this.value)">
-            <option value="modelset">Model Percentage</option>
-            <option value="makeset">Make Percentage</option>
-            <option value="bodyset">Body Style Percentage</option>
+    <select id="selDataset" onchange="optionChanged(this.value)">
+
           </select>
 
     <!-- bar chart div -->
-    <div id="donut_chart"></div>
+    <div id="player_chart"></div>
 
     <!-- JS  -->
-    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/plots.js') }}"></script>     -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/shivam.js') }}"></script>    
 
   </body>
 </html>

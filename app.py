@@ -20,8 +20,12 @@ def index():
     return render_template('index.html')
 
 @app.route("/JSON")
-def data():
-    return render_template('data.html')
+def getJsonData():
+	filename = 'data/NewRookiePredictions.json'
+	with open(filename) as test_file:
+		data = json.load(test_file)
+		return jsonify(data)
+	return jsonify(data)
 
 @app.route("/RookiePlots")
 def plots():

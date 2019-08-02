@@ -20,8 +20,8 @@ def index():
     return render_template('index.html')
 
 @app.route("/JSON")
-def data():
-    return render_template('data.html')
+def getJsonData():
+	return render_template('data.html')
 
 @app.route("/RookiePlots")
 def plots():

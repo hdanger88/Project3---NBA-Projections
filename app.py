@@ -21,11 +21,7 @@ def index():
 
 @app.route("/JSON")
 def getJsonData():
-	filename = 'data/NewRookiePredictions.json'
-	with open(filename) as test_file:
-		data = json.load(test_file)
-		return jsonify(data)
-	return jsonify(data)
+	return render_template('data.html')
 
 @app.route("/RookiePlots")
 def plots():

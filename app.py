@@ -29,7 +29,7 @@ def plots():
 
 @app.route("/jsonData")
 def getData():
-	filename = 'data/NewRookiePredictions.json'
+	filename = 'data/NewRookiePredictionsFinal.json'
 	with open(filename) as test_file:
 		data = json.load(test_file)
 		return jsonify(data)

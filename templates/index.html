@@ -50,6 +50,7 @@
 		border-radius: 20px;
 	}
 	p {
+		font-size: large;
 		margin-left:30px;
 		margin-right:30px;
 	}
@@ -129,58 +130,46 @@
 		</div>
 			<xbody>
 				<div class="row">
-					<div class= "col-md-6"> 
-							<!-- <h2><strong>Rookie Projections - Statement of Purpose and Methods</strong></h2> -->
+				<div class= "col-lg-1 col-md-1"></div>
+				<div class= "col-lg-10 col-md-10,text-center"> 
+					<div id="purposeStatement">
+							<h2><strong>Rookie Projections - Statement of Purpose and Methods</strong></h2>
+						</div>
+				<div class="row">
+					<div class= "col-lg-3 col-md-2"> </div>
+					<div class= "col-lg-6 col-md-8,text-center">
 						<div id="xcontainer">
 						<div id="xmonitor">
 								<img src = "http://media.mlive.com/newsnow_impact/photo/large-20080228-willferrell-semiprojpg-9af92cc9a24dea8f.jpg" class="img-fluid"></img>
 						</div>
 						</div>
 					</div>
-			</xbody>
-			<div class= "col-md-6"> 
-				<div id="purposeStatement">
-					<h2><strong>Rookie Projections - Statement of Purpose and Methods</strong></h2>
+					</div>
+				<div class="row">
+					<div class= "col-lg-1 col-md-1"> </div>
+					<div class= "col-lg-10 col-md-10"> 
+						<p><strong>What were we trying to do?</strong></p>
+						<p>	  We analyzed statistics from the last 20 rookie draft classes to predict the stats of the 2019 NBA rookie draft class.  In order to do this we scraped draft orders, college, and NBA statistics for 718 former college players (excluding international and high school players) who played in the NBA.  Next we used the college basketball statistics we obtained for these historic players to create a prediction, which we then compared against their rookie seasons.  We utilized 29 unique statistical categories related to each players statistical production and implemented recursive feature elimination to determine which feature had the highest impact.  Three different regression models were run and analyzed to determine which model was best for our prediction.  Ulitmately, we chose Random Forrest. </p>
+						<p>   Random Forrest held the highest % accuracy within 50% of the predicted values.  Additionally, it performed higher than the other models in cross validation testing. Random Forrest outperformed Linear Regression and XGB Regressor in predicting high level performers, namely players that scored more than 15 points per game in their rookie seasons.</p>
+						<p>	  Overall, their are still improvements that can still be made to our model.  We experienced overfitting initially due to the size of our dataset and had concerns with the low accuracy of our predictions.  Eventually, we determined that overfitting our training models allowed us to more accurately predict the stats of higher perfoming players.</p>
+						<p><strong>Datasets:</strong></p>
+						<p>Extracted from <a href = "https://www.sports-reference.com/cbb/players/w-index.html">College Basketball Stats</a> and <a href = "https://www.basketball-reference.com/leagues/NBA_2019_per_game.html">NBA Rookie Stats</a>.</p>
+						<br>
+						<p><strong>Cleaning Methods:</strong></p>
+						<p>Python, Pandas, Numpy</p>
+						<br>
+						<p><strong>Data Evaluation: </strong></p>
+						<p>SciKit Learn, Random Forrest, XG Boost, Seaborn</p>
+						<br>
+						<p><strong>Plotting Libraries: </strong></p>
+						<p>Plotly, Matplotlib</p>
+						<br>
+						<p><strong>GitHub Repository:</strong></p>
+						<p><a href = "https://github.com/hdanger88/Project3---NBA-Projections">https://github.com/hdanger88/Project3---NBA-Projections</a></p>				
+					</div>
 				</div>
-					<p>
-						Dataset: Extracted from <a href = "https://www.sports-reference.com/cbb/players/w-index.html">College Basketball Stats</a> and <a href = "https://www.basketball-reference.com/leagues/NBA_2019_per_game.html">NBA Rookie Stats</a>.
-					</p>
-					<p>
-						Cleaning Methods: Python, Pandas, Numpy
-					</p>
-					<p>
-						Data Evaluation: SciKit Learn, Keras, Seaborn
-					</p>
-					<p>
-						Plotting Libraries: Plotly
-					</p>
-					<p>
-						GitHub Repository:  <a href = "https://github.com/hdanger88/Project3---NBA-Projections">https://github.com/hdanger88/Project3---NBA-Projections</a>
-					</p>
-					<br> 
-			</div>
+			</xbody>	
 		</div>
-
-				
-			<!-- <div class="col-lg-6 col-md-6">
-				<h2><strong>Preview of Visualizations and Data Tables</strong></h2>
-				<br>
-				<br>    
-				<div id="list" class="list-group my-auto">
-					<a class="list-group-item-action" href="/map"><h3><strong>Map</strong></h3></a>
-					<img class="panel" href="/map" src="{{url_for('static', filename='Map.png')}}" alt="Map">
-					<br>
-					<a class="list-group-item-action" href="/data"><h3><strong>Car Specs</strong></h3></a>
-					<img class="panel" src="{{url_for('static', filename='Data.png')}}" alt="Car Specs">
-					<br>
-					<a class="list-group-item-action" href="/plots"><h3><strong>Plots</strong></h3></a>
-					<img class="panel" src="{{url_for('static', filename='Plots.png')}}" alt="Plots">
-					<br>
-					<a class="list-group-item-action" href="#item-4"><h3><strong>JSON Data</strong></h3></a>
-					<img class="panel" src="##" alt="/">
-					<br>
-				</div>
-			</div> -->
 		</div>
 </body>
 </html>
